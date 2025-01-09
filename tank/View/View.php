@@ -42,7 +42,7 @@ class View
          */
         public static function Start(string $view, array $params = [], array $attr = [])
         {
-                self::$ViewConfig = require (getRoot() . "/config/view.php");
+                self::$ViewConfig = require (getRoot() . "/config/View.php");
                 self::$HeaderAttr = $attr;
                 $url = getRoot() . "views/";
                 self::$view = $view;
