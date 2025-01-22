@@ -12,7 +12,7 @@ class vic
      * @var array
      */
     public array $serviceArr = [
-        "service" => "php -S localhost:8080 -t public"
+        // "service" => "php -S localhost:8080 -t public"
     ];
     /**
      * 构造服务
@@ -20,6 +20,14 @@ class vic
      * @param string $serviceName 服务名称 must
      */
     public function __construct(public string $serviceName)
+    {
+    }
+    /**
+     * 运行服务
+     * @access public
+     * @return void
+     */
+    public function run(): void
     {
         $this->VerIsHasService();
 

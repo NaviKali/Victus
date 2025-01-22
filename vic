@@ -9,8 +9,8 @@ $cwd = getcwd();
     "service"=>"php -S localhost:8080 -t public",
     "apache"=>"Start ," . $cwd . "\\.bat\\.StartApache.bat",
     "nginx"=>"Start ," . $cwd . "\\.bat\\.StartNginx.bat",
-    "server"=>"Start ," . $cwd . "\\.bat\\.TankExec.bat",
+    "server"=>"php .exec/exec.php",
     "document"=>"Start ," . $cwd . "\\.bat\\.StartDocument.bat",
     "pack"=>"tar -cf pack.gz ./.conf ./.mongodb ./.bat ./.do ./.exec ./app ./config ./constant ./document ./env ./logs ./proxy ./public ./views ./必看.md ./docker-compose.yml ./app.json ./composer.json ./composer.lock ./init.php",
     "redis"=>"Start ," . $cwd . "\\.bat\\.StartRedis.bat",
-]);
+])->run();
